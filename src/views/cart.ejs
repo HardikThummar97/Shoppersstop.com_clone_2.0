@@ -1,0 +1,120 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/static/css/cart.css" />
+    <link rel="javascript" type="text/js" href="/static/js/cart.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <title>Your Shopping Bag | Shoppers Stop</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header class="home-header">
+      <div class="left-header">
+        <div class="stores-contact">
+          <a href="http://localhost:3000/home/productDesc"
+            ><img src="/static/img/H1.png"
+          /></a>
+        </div>
+        <div class="head-logo">
+          <a href="home.html"
+            ><img
+              src="	https://prodstatic.shoppersstop.com/_ui/responsive/common/assets/images/sslogo.svg"
+          /></a>
+        </div>
+      </div>
+      <div class="right-header">
+        <img src="/static/img/H3.png" />
+      </div>
+    </header>
+    <!-- Header close -->
+    <br /><br /><br />
+    <br /><br />
+    <br /><br /><br />
+
+    <main>
+      <div class="basket" id="bag">
+        <!-- here -->
+        <p id="sb">SHOPPING BAG</p>
+        <div id="pc">
+          <input type="text" placeholder="Enter Pincode" id="ep" />
+          <br />
+          <button id="checkbtn">CHECK</button>
+        </div>
+        <div class="basket-labels">
+          <ul>
+            <li class="item item-heading">Item</li>
+            <li class="price">Price</li>
+            <li class="quantity">Quantity</li>
+            <li class="subtotal">Subtotal</li>
+          </ul>
+        </div>
+      </div>
+      <aside>
+        <div class="summary">
+          <div class="summary-total-items">ORDER SUMMERY</div>
+          <br />
+          <div class="basket-module">
+            <input
+              id="promo-code"
+              type="text"
+              name="promo-code"
+              maxlength="5"
+              class="promo-code-field"
+              placeholder="Enter promo/coupon code"
+            />
+            <button class="promo-code-cta">Apply</button>
+          </div>
+          <div class="summary-subtotal">
+            <div class="subtotal-title">Subtotal</div>
+            <div class="subtotal-value final-value" id="basket-subtotal">
+              4194
+            </div>
+            <div class="subtotal-title">Gift Packaging</div>
+            <div class="subtotal-value final-value" id="">Free</div>
+            <div class="summary-subtotal">
+              <div class="subtotal-title">Delivery Charges</div>
+              <div class="subtotal-value final-value" id="basket-subtotal">
+                100
+              </div>
+              <div class="summary-subtotal">
+                <div class="summary-promo hide">
+                  <div class="promo-title">MASAI</div>
+                  <div class="promo-value final-value" id="basket-promo"></div>
+                </div>
+
+                <div class="summary-total">
+                  <div class="total-title">Total</div>
+                  <div class="total-value final-value" id="basket-total">
+                    4294
+                  </div>
+                </div>
+                <div class="summary-checkout">
+                  <button class="checkout-cta" onclick="openWin()">
+                    Checkout
+                  </button>
+                </div>
+                <div>
+                  <p style="color: gray; font-size: 10">
+                    No Delivery charges for Express Store Pickup.
+                  </p>
+                  <br />
+                  <p style="color: gray; font-size: 10">
+                    Do you have a gift card or and electronic gift voucher? Use
+                    it at the payment page.
+                  </p>
+                </div>
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
+
+<script src="/static/js/cart.js"></script>
