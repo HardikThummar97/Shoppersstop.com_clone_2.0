@@ -12,14 +12,14 @@ ul li {
 }
 /*-------------------------*/
 
-#overlay{
+#overlay {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 1000%;
-  z-index:10;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.65);
 }
 .signup {
@@ -45,8 +45,8 @@ ul li {
   text-align: center;
   float: left;
   background-color: white;
-  border-top-left-radius:10px;
-  border-bottom-left-radius:10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   box-sizing: border-box;
   padding: 35px;
   padding-bottom: 10px;
@@ -64,8 +64,8 @@ f1 {
 #simg {
   height: 100%;
   width: 100%;
-  border-top-right-radius:10px;
-  border-bottom-right-radius:10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .signin,
@@ -158,7 +158,7 @@ a {
   background-color: white;
   border: 1px solid white;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  margin-right:10px;
+  margin-right: 10px;
 }
 .fb-1 img {
   height: 35px;
@@ -204,8 +204,8 @@ a {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   margin: auto;
 }
-#inputdiv{
-  box-shadow:2px 2px 6px 6px rgba(49, 49, 49, 0.1);
+#inputdiv {
+  box-shadow: 2px 2px 6px 6px rgba(49, 49, 49, 0.1);
 }
 
 #email2,
@@ -227,7 +227,7 @@ a {
 #password,
 #radio {
   width: 98%;
-  height:45px;
+  height: 45px;
   background-color: white;
   border: 1px solid rgb(246, 241, 241);
   -moz-border-bottom-colors: none;
@@ -235,16 +235,17 @@ a {
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
 }
-#number{
-  font-size:small;
+#number {
+  font-size: small;
 }
 #radio {
-  padding:10px;
+  padding: 10px;
   box-sizing: border-box;
-  margin-left:3px;
+  margin-left: 3px;
   text-align: left;
 }
-#male,#female:checked::after{
+#male,
+#female:checked::after {
   background-color: #ff5d3b;
 }
 /*-------------------------*/
@@ -344,7 +345,7 @@ div.signin-div:hover {
   clear: both;
 }
 nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 68px;
   background-color: #fff;
