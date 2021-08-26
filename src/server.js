@@ -14,6 +14,12 @@ const connect = require("./configs/db");
 const homeController = require("./controllers/home.controller");
 app.use("/home", homeController);
 
+const productController = require("./controllers/product.controller");
+app.use("/products", productController);
+
+const cartController = require("./controllers/cart.controller");
+app.use("/cart", cartController);
+
 //Start connection;
 app.listen(3000, async () => {
   await connect();

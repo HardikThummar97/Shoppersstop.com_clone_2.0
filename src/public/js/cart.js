@@ -1,3 +1,10 @@
+// fetch(`http://localhost:3000/cart`)
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log("data:", data);
+//     showcart(data.cart);
+//   });
+
 function showcart() {
   let cart = JSON.parse(localStorage.getItem("cart"));
   const summary = document.querySelector(".summary-subtotal");
