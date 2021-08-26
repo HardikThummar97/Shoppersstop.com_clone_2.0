@@ -5,7 +5,11 @@
 //     showcart(data.cart);
 //   });
 
-function showcart() {
+async function showcart() {
+  // let response = await fetch(`http://localhost:3000/cart`);
+  // let cartObj = await response.json();
+  // localStorage.setItem("cart", JSON.stringify(cartObj.cart));
+  // let cart = cartObj.cart;
   let cart = JSON.parse(localStorage.getItem("cart"));
   const summary = document.querySelector(".summary-subtotal");
   if (cart == null) {
@@ -28,11 +32,11 @@ function showcart() {
           </div>
           <div class="price">${el.price}</div>
           <div class="quantity">
-            <input type="number" value="1" min="1" class="quantity-field">
+            <input type="number" value="${el.quantity}" min="1" id="${el._id}" class="quantity-field">
           </div>
           <div class="subtotal">${el.price}</div>
           <div class="remove">
-            <button id="rmbtn${i}" value="${i}">Remove</button>
+            <button id="${el._id}" value="${i}">Remove</button>
           </div>`;
       bag.append(product);
     });
@@ -141,10 +145,17 @@ function recalculateCart(onlyTotal) {
 
 /* Update quantity */
 function updateQuantity(quantityInput) {
+  console.log("quantityInput:", quantityInput);
   /* Calculate line price */
+  var index = $(quantityInput)
+    .parent()
+    .siblings(".remove")
+    .children()
+    .attr("value");
   var productRow = $(quantityInput).parent().parent();
   var price = parseFloat(productRow.children(".price").text());
   var quantity = $(quantityInput).val();
+  console.log("quantity:", quantity);
   var linePrice = price * quantity;
 
   /* Update line price display and recalc cart totals */
@@ -156,8 +167,28 @@ function updateQuantity(quantityInput) {
     });
   });
 
-  productRow.find(".item-quantity").text(quantity);
-  updateSumItems();
+  // productRow.find(".item-quantity").text(quantity);
+  // updateSumItems();
+
+  //update quantity in mongoDB;
+  let id = quantityInput.id;
+  let body = JSON.stringify({
+    quantity: quantity,
+  });
+  fetch(`http://localhost:3000/cart/${id}`, {
+    method: "PATCH",
+    body: body,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((res) => console.log(res));
+
+  //update quantity in local;
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  cart[index].quantity = quantity;
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 function updateSumItems() {
@@ -171,8 +202,20 @@ function updateSumItems() {
 /* Remove item from cart */
 function removeItem(removeButton) {
   let cart = JSON.parse(localStorage.getItem("cart"));
+
+  //Delete from database;
+  let id = removeButton.id;
+  console.log("id:", id);
+  fetch(`http://localhost:3000/cart/${id}`, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then((res) => console.log(res));
+
+  //Delete from local;
   cart.splice(removeButton.value, 1);
   localStorage.setItem("cart", JSON.stringify(cart));
+
   /* Remove row from DOM and recalc cart total */
   var productRow = $(removeButton).parent().parent();
   productRow.slideUp(fadeTime, function () {

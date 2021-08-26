@@ -81,9 +81,11 @@ async function addToCart() {
   if (cartProduct.product == null) {
     let response = await fetch(`http://localhost:3000/products/${id}`);
     let cartObj = await response.json();
+    cartObj.quantity = 1;
     console.log("cartObj:", cartObj);
 
     let product = JSON.stringify(cartObj);
+    console.log("product:", product);
 
     fetch(`http://localhost:3000/cart`, {
       method: "POST",
@@ -98,6 +100,12 @@ async function addToCart() {
       .catch(function (res) {
         console.log("errr: ", res);
       });
+
+    //Also ading to local storage, to effectively render cart page;
+    let response1 = await fetch(`http://localhost:3000/cart`);
+    let cartObj1 = await response1.json();
+    localStorage.setItem("cart", JSON.stringify(cartObj1.cart));
+
     window.location.href = "http://localhost:3000/home/cart";
   } else {
     alert("Product already added in cart");

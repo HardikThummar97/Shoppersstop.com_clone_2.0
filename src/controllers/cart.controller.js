@@ -23,4 +23,16 @@ router.post("/", async (req, res) => {
   res.send({ Added: cartProduct });
 });
 
+router.patch("/:id", async (req, res) => {
+  const cartProduct = await Cart.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
+  res.send({ updated: cartProduct });
+});
+
+router.delete("/:id", async (req, res) => {
+  const cartProduct = await Cart.findByIdAndDelete(req.params.id);
+  res.send({ Deleted: cartProduct });
+});
+
 module.exports = router;

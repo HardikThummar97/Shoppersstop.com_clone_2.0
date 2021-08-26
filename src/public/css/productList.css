@@ -651,17 +651,17 @@ h2 {
   color: rgb(85, 81, 81);
 }
 #items > div > h4 {
-  margin: 20px 10px;
+  margin: 16px 10px;
   font-weight: bolder;
   color: black;
   float: left;
   margin-left: 58px;
 }
 #items > div > p {
-  /* margin: 16px 0px; */
+  margin: 16px 0px;
   font-weight: bolder;
   color: black;
-  /* margin-left: 109px; */
+  margin-left: 109px;
 }
 input[type="checkbox"] {
   background-color: blue;

@@ -14,6 +14,7 @@ const cartSchema = new mongoose.Schema(
     detail_1: String,
     price_detail: String,
     price: Number,
+    quantity: Number,
   },
   { versionKey: false }
 );
