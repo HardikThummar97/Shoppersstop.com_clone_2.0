@@ -518,8 +518,9 @@ h2 {
 #items > div > img {
   display: grid;
   grid-template-columns: auto auto;
+  width: 100%;
   height: 350px;
-  border: 1px solid grey;
+  border-bottom: 1px solid silver;
   margin: 00px 0px;
 }
 .detail {
@@ -640,7 +641,7 @@ h2 {
   gap: 5%;
 }
 #items > div {
-  border: 1px solid grey;
+  border: 1px solid silver;
   width: 234px;
   height: 437px;
 }

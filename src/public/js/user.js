@@ -1,59 +1,59 @@
 document.getElementById("si2").addEventListener("click", function () {
   document.querySelector(".signin2").style.display = "flex";
-  document.getElementById('overlay').style.display="block";
+  document.getElementById("overlay").style.display = "block";
 });
 
 document.querySelector(".close2").addEventListener("click", function () {
   document.querySelector(".signin2").style.display = "none";
-  document.getElementById('overlay').style.display="none";
+  document.getElementById("overlay").style.display = "none";
 });
 document.getElementById("su1").addEventListener("click", function () {
   document.querySelector(".signup").style.display = "flex";
-  document.getElementById('overlay').style.display="block";
+  document.getElementById("overlay").style.display = "block";
 });
 
 document.querySelector(".close1").addEventListener("click", function () {
   document.querySelector(".signup").style.display = "none";
-  document.getElementById('overlay').style.display="none";
+  document.getElementById("overlay").style.display = "none";
 });
 
 document.getElementById("gmail").addEventListener("click", function () {
   document.querySelector(".signin").style.display = "none";
   document.querySelector(".signin2").style.display = "flex";
-  document.getElementById('overlay').style.display="block";
+  document.getElementById("overlay").style.display = "block";
 });
 document.querySelector(".close").addEventListener("click", function () {
   document.querySelector(".signin").style.display = "none";
-  document.getElementById('overlay').style.display="none";
+  document.getElementById("overlay").style.display = "none";
 });
 
 document.getElementById("go2sup").addEventListener("click", function () {
   document.querySelector(".signin").style.display = "none";
   document.querySelector(".signup").style.display = "flex";
-  document.getElementById('overlay').style.display="block";
+  document.getElementById("overlay").style.display = "block";
 });
 
 document.getElementById("gosup").addEventListener("click", function () {
   document.querySelector(".signin2").style.display = "none";
   document.querySelector(".signup").style.display = "flex";
-  document.getElementById('overlay').style.display="block";
+  document.getElementById("overlay").style.display = "block";
 });
 
 document.getElementById("go2si").addEventListener("click", function () {
   document.querySelector(".signup").style.display = "none";
   document.querySelector(".signin2").style.display = "flex";
-  document.getElementById('overlay').style.display="block";
+  document.getElementById("overlay").style.display = "block";
 });
 
 document.getElementById("sinwo").addEventListener("click", function () {
   document.querySelector(".signin2").style.display = "none";
   document.querySelector(".signin").style.display = "flex";
-  document.getElementById('overlay').style.display="block";
+  document.getElementById("overlay").style.display = "block";
 });
 
 document.querySelector(".close2").addEventListener("click", function () {
   document.querySelector(".signin2").style.display = "none";
-  document.getElementById('overlay').style.display="nonw";
+  document.getElementById("overlay").style.display = "nonw";
 });
 
 document.getElementById("continue").addEventListener("click", function () {
@@ -89,7 +89,7 @@ document.getElementById("continue").addEventListener("click", function () {
     alert("Account created successfully");
 
     function goLog() {
-      window.location.href = "home.html";
+      window.location.href = "";
     }
     setTimeout(goLog(), 1000);
   }
@@ -114,7 +114,7 @@ document.getElementById("sinbtn").addEventListener("click", function () {
   }
   if (flag) {
     alert("Signied In");
-    window.location.href = "home.html";
+    window.location.href = "/";
   } else {
     alert("Your username or password is incorrect");
   }
