@@ -105,19 +105,11 @@ async function addToCart() {
     let response1 = await fetch(`http://localhost:3000/cart`);
     let cartObj1 = await response1.json();
     localStorage.setItem("cart", JSON.stringify(cartObj1.cart));
-
+    
     window.location.href = "http://localhost:3000/home/cart";
   } else {
     alert("Product already added in cart");
     window.location.href = "http://localhost:3000/home/cart";
   }
-  // let cart = localStorage.getItem("cart");
-  // if (cart == null) {
-  //   cart = [];
-  // } else {
-  //   cart = JSON.parse(localStorage.getItem("cart"));
-  // }
-  // cart.push(item);
-  // localStorage.setItem("cart", JSON.stringify(cart));
-  // window.location.href = "http://localhost:3000/home/cart";
+  
 }
