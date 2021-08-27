@@ -428,7 +428,7 @@ li.topmenu > a:hover {
 /* <!-- nav bar closed --> */
 
 #bigContainer {
-  margin: 0px 0px;
+  margin: auto;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -475,7 +475,6 @@ h2 {
   padding: 0px 0px;
   width: 98%;
   margin-top: 4px;
-  height: 45px;
 }
 .name {
   margin: 12px 0px;
@@ -566,7 +565,6 @@ h2 {
 #sizeBox {
   width: 95%;
   border-bottom: 1px solid grey;
-  height: 160px;
 }
 
 #firstinsideOp {
@@ -581,7 +579,6 @@ h2 {
 #colorBox {
   width: 95%;
   border-bottom: 1px solid grey;
-  height: 235px;
 }
 
 #delivery {
@@ -637,17 +634,19 @@ h2 {
 }
 #items {
   display: grid;
-  grid-template-columns: repeat(4, 20%);
-  gap: 5%;
+  grid-template-columns: repeat(4, 23%);
+  grid-gap: 5%;
 }
 #items > div {
-  border: 1px solid silver;
-  width: 234px;
-  height: 437px;
+  border: 1px solid grey;
+  width: 235px;
+}
+#items > img {
+  margin: auto;
 }
 #items > div > h3 {
   text-align: center;
-  margin: 0px 0px;
+  margin-left: auto;
   font-weight: bolder;
   color: rgb(85, 81, 81);
 }

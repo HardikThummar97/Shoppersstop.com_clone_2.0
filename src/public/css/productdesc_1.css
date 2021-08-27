@@ -426,6 +426,9 @@ li.topmenu > a:hover {
 }
 
 /* <!-- nav bar closed --> */
+.container{
+  margin: auto;
+}
 
 /* * <!-- section-1 carousel-1 start-- > */
 .c1-slider {
