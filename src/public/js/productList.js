@@ -147,6 +147,13 @@ async function blue() {
       ) {
         result.push(data[i]);
       }
+
+      if (
+        data[i].img_1 ==
+        "https://sslimages.shoppersstop.com/sys-master/images/hb0/h41/16563222183966/S21METHKUPALNV1_NAVY.jpg_1088Wx1632H"
+      ) {
+        result.push(data[i]);
+      }
     }
     showProducts(result);
   } else {
@@ -188,6 +195,12 @@ async function white() {
       if (
         data[i].img_1 ==
         "https://sslimages.shoppersstop.com/sys-master/images/hc0/h01/14520727011358/206602138_9100.jpg_1088Wx1632H"
+      ) {
+        result.push(data[i]);
+      }
+      if (
+        data[i].img_1 ==
+        "https://sslimages.shoppersstop.com/sys-master/images/h84/h12/14521926975518/206601863_9100.jpg_1088Wx1632H"
       ) {
         result.push(data[i]);
       }
@@ -260,6 +273,12 @@ async function black() {
       if (
         data[i].img_1 ==
         "https://sslimages.shoppersstop.com/sys-master/images/h81/h53/15594895245342/A20METHKPS05TL_MID_BLUE.jpg_230Wx334H"
+      ) {
+        result.push(data[i]);
+      }
+      if (
+        data[i].img_1 ==
+        "https://sslimages.shoppersstop.com/sys-master/images/hc6/hae/14559150506014/206602125_9212.jpg_1088Wx1632H"
       ) {
         result.push(data[i]);
       }
