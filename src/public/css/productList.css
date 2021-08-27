@@ -428,7 +428,7 @@ li.topmenu > a:hover {
 /* <!-- nav bar closed --> */
 
 #bigContainer {
-  margin:auto;
+  margin: auto;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -517,8 +517,9 @@ h2 {
 #items > div > img {
   display: grid;
   grid-template-columns: auto auto;
+  width: 100%;
   height: 350px;
-  border: 1px solid grey;
+  border-bottom: 1px solid silver;
   margin: 00px 0px;
 }
 .detail {
@@ -634,18 +635,18 @@ h2 {
 #items {
   display: grid;
   grid-template-columns: repeat(4, 23%);
-  grid-gap:5%;
+  grid-gap: 5%;
 }
 #items > div {
   border: 1px solid grey;
   width: 235px;
 }
-#items>img{
+#items > img {
   margin: auto;
 }
 #items > div > h3 {
   text-align: center;
-  margin-left:auto;
+  margin-left: auto;
   font-weight: bolder;
   color: rgb(85, 81, 81);
 }
