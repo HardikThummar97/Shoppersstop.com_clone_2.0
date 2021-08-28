@@ -131,7 +131,7 @@ main {
   margin: 0 auto;
   overflow: hidden;
   padding: 1rem 0;
-  width: 960px;
+  width:70%;
 }
 
 .basket,
@@ -143,7 +143,7 @@ aside {
 }
 
 .basket {
-  width: 70%;
+  width:70%;
 }
 
 .basket-module {
@@ -190,6 +190,7 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 li {
@@ -278,7 +279,7 @@ li.subtotal:before {
 aside {
   float: right;
   position: relative;
-  width: 30%;
+  width:25%;
 }
 
 .summary {
@@ -307,7 +308,7 @@ aside {
   height: 100px;
   width:100%;
   background-color: rgb(228, 228, 228);
-  padding: 20px;
+  padding: 10px;
 
 }
 #checkbtn{
@@ -393,6 +394,18 @@ aside {
   background: linear-gradient(to right, #ff5d3b 0, #ff2c65 100%);
 }
 
+.container-fluid{
+  width: 100%;
+  display: block;
+  background: url("../img/Exit-Intent-Pop-Up-Creative-Strip-Web\ \(1\).webp");
+  height: 200px;
+  background-size: cover;
+}
+
+#ep,#checkbtn{
+  height:28px;
+}
+
 .summary-delivery-selection {
   background-color: #ccc;
   border: 1px solid #aaa;
@@ -452,8 +465,8 @@ aside {
     padding: 0;
   }
   .summary {
-    margin-top: 1.25rem;
-    position: relative;
+    -top: 1.25rem;
+    position:absolute;
   }
 }
 

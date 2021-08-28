@@ -613,7 +613,6 @@ body {
   text-decoration: underline;
 }
 #moreOff {
-  margin: 4px;
   color: red;
   height: 41px;
 }
@@ -783,8 +782,9 @@ body {
   color: red;
 }
 
-.container-fluid1{
+.container-fluid{
   position:absolute;
+  margin:auto;
 }
 
 /* <!-- section-1 carousel-1 end--> */
