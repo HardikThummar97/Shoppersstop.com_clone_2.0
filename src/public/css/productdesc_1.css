@@ -431,7 +431,7 @@ li.topmenu > a:hover {
 .c1-slider {
   position: relative;
   top: 140px;
-  margin-left: 50px;
+  margin-left: 70px;
   width: 40%;
   height: 550px;
   float: left;
@@ -439,7 +439,7 @@ li.topmenu > a:hover {
 #c1-slider_1 {
   position: relative;
   top: 140px;
-  margin-left: 50px;
+  margin-left: 25px;
   width: 597px;
   height: 107px;
   float: left;
@@ -581,8 +581,8 @@ body {
 .product_rating {
   width: 45%;
   height: 279px;
-  margin-left: 637px;
-  padding-top: 249px;
+  margin-left: 635px;
+  padding-top: 245px;
 }
 .span {
   margin-left: 5px;
@@ -595,7 +595,7 @@ body {
 #logo {
   width: 45%;
   height: 100px;
-  margin-left: 637px;
+  margin-left: 635px;
   padding: 0px;
 }
 #logo > img {

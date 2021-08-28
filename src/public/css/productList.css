@@ -430,7 +430,7 @@ li.topmenu > a:hover {
 #bigContainer {
   width: 100%;
   margin: auto;
-  margin-left: 110px;
+  margin-left: 63px;
   display: flex;
   flex-direction: row;
   justify-content: center;

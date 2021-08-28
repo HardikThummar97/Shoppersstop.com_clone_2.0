@@ -1,6 +1,27 @@
+let isLoggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+if (isLoggedIn == null) {
+  isLoggedIn = "";
+}
+console.log("isLoggedIn:", isLoggedIn);
+
+let signInBtn = document.getElementById("si2");
+let signUpBtn = document.getElementById("su1");
+let profileBtn = document.querySelector(".profile-icon img");
+console.log("profileBtn:", profileBtn);
+if (isLoggedIn != "") {
+  signInBtn.innerHTML = `<a>${isLoggedIn}</a>`;
+  signUpBtn.innerHTML = `<a>SIGN OUT</a>`;
+  profileBtn.src =
+    "https://www.clipartmax.com/png/middle/83-836357_greg-ezeilo-avatar-icon-png.png";
+}
+
 document.getElementById("si2").addEventListener("click", function () {
-  document.querySelector(".signin2").style.display = "flex";
-  document.getElementById("overlay").style.display = "block";
+  if (isLoggedIn != "") {
+    alert(`${isLoggedIn} has signed in !`);
+  } else {
+    document.querySelector(".signin2").style.display = "flex";
+    document.getElementById("overlay").style.display = "block";
+  }
 });
 
 document.querySelector(".close2").addEventListener("click", function () {
@@ -8,8 +29,17 @@ document.querySelector(".close2").addEventListener("click", function () {
   document.getElementById("overlay").style.display = "none";
 });
 document.getElementById("su1").addEventListener("click", function () {
-  document.querySelector(".signup").style.display = "flex";
-  document.getElementById("overlay").style.display = "block";
+  if (isLoggedIn != "") {
+    isLoggedIn = "";
+    localStorage.setItem("loggedIn", JSON.stringify(isLoggedIn));
+    signInBtn.innerHTML = `<a>SIGN IN</a>`;
+    signUpBtn.innerHTML = `<a>SIGN UP</a>`;
+    profileBtn.src =
+      "https://prodstatic.shoppersstop.com/_ui/responsive/common/assets/images/iconuser.png";
+  } else {
+    document.querySelector(".signup").style.display = "flex";
+    document.getElementById("overlay").style.display = "block";
+  }
 });
 
 document.querySelector(".close1").addEventListener("click", function () {
