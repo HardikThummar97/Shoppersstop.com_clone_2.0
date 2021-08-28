@@ -345,7 +345,7 @@ div.signin-div:hover {
   clear: both;
 }
 nav {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 68px;
   background-color: #fff;
@@ -921,12 +921,12 @@ li.topmenu > a:hover {
   width: 60%;
   cursor: pointer;
 }
-.footer-main,.container-fluid{
+.footer-main,
+.container-fluid {
   position: relative;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   width: 100%;
 }
-
 
 /* <!-- footer-2 end--> */

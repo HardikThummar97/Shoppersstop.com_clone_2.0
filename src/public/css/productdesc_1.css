@@ -546,7 +546,7 @@ li.topmenu > a:hover {
   float: left;
 }
 #c1-slider_1 > div > div {
-  margin: 8px 143px;
+  margin: 22px 125px;
 }
 body {
   font-size: 60px;
@@ -608,12 +608,13 @@ body {
   font-weight: bold;
   float: left;
   margin-left: 8px;
+  margin-bottom: 0px;
 }
 #underline {
   text-decoration: underline;
 }
 #moreOff {
-  margin: 4px;
+  margin-top: 8px;
   color: red;
   height: 41px;
 }
@@ -783,8 +784,8 @@ body {
   color: red;
 }
 
-.container-fluid1{
-  position:absolute;
-}
+/* .container-fluid1 {
+  position: absolute;
+} */
 
 /* <!-- section-1 carousel-1 end--> */
