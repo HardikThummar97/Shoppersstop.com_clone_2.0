@@ -921,4 +921,12 @@ li.topmenu > a:hover {
   width: 60%;
   cursor: pointer;
 }
+.footer-main,.container-fluid{
+  position: relative;
+  bottom:0;
+  left:0;
+  width: 100%;
+}
+
+
 /* <!-- footer-2 end--> */
