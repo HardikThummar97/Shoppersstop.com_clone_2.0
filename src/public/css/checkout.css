@@ -76,7 +76,7 @@ main {
   margin: 0 auto;
   overflow: hidden;
   padding: 1rem 0;
-  width: 960px;
+  width:90%;
   display: flex;
 }
 label {
@@ -313,20 +313,185 @@ aside {
   }
 }
 
-@media screen and (min-width: 641px) and (max-width: 960px) {
-  aside {
-    padding: 0 1rem 0 0;
-  }
-  .summary {
-    width: 28%;
-  }
+
+
+/*-------- newcss ----------*/
+
+#checkoutt {
+  width: 70%;
 }
 
+.child {
+  width:80%;
+  height: 60px;
+  background-color: #cecece;
+  display: flex;
+}
+
+#change {
+  height: 30px;
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 240px;
+  background-color:white;
+  border: none;
+  color: #ff5d3b;
+}
+
+.child2 {
+  width:80%;
+  height: 700px;
+  background-color: none;
+  margin-top: 30px;
+  border: 1px solid #cecece;
+}
+
+.delivery {
+  width:100%;
+  height: 70px;
+  background-color: #cecece;
+  display: flex;
+}
+
+.address {
+  width:60%;
+  height:50px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#aa {
+  width: 60%;
+  height: 50px;
+  border: 1px solid #cecece;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+#bb {
+  width: 60%;
+  height: 50px;
+  background-color: beige;
+  margin-left: 2px;
+  background-color: white;
+  border: 1px solid #cecece;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+#a1 {
+  border-top: 2px solid #f5f5f0;
+  height: 600px;
+  position:absolute;
+  width:100%;
+}
+
+#but {
+  height: 40px;
+  width: 200px;
+  background: linear-gradient(to right, #ff5d3b 0, #ff2c65 100%);
+  bottom:10px;
+  position:absolute;
+  color: white;
+  border-radius: 5px;
+  margin-right:30px;
+  border: none;
+  margin-top: 20px;
+}
+#btndiv{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  border: 1px solid #e0e0d1;
+}
+
+.div1 {
+  display: flex;
+  margin-left: 20x;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.div2 {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#a2 {
+  height: 500px;
+  visibility: hidden;
+}
+
+.AdressLines {
+  border: 1px solid #e7e7e7;
+  height: 36px;
+  margin-right: 20px;
+  width: 460px;
+  margin-bottom: 20px;
+}
+.fsname {
+  border: 1px solid #e0e0d1;
+  height: 36px;
+  margin-right: 20px;
+  width: 220px;
+}
+.code {
+  border: 1px solid #e0e0d1;
+  height: 36px;
+  margin-right: 20px;
+  width: 40px;
+  background-color: #f5f5f0;
+}
+
+.num {
+  border: 1px solid #e0e0d1;
+  height: 36px;
+  margin-right: 20px;
+  width: 400px;
+}
+
+.pincode {
+  border: 1px solid #e0e0d1;
+  height: 36px;
+  margin-right: 20px;
+  width: 460px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.cs {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.city {
+  border: 1px solid #e0e0d1;
+  height: 36px;
+  margin-right: 20px;
+  width: 220px;
+  background-color: #f5f5f0;
+}
+
+.Addresses {
+  border: 1px solid #e0e0d1;
+  height: 36px;
+  margin-right: 20px;
+  width: 460px;
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 960px) {
   main {
     width: 100%;
+    flex-direction: column;
   }
-  .product-details {
-    padding: 0 1rem;
+  
+  #checkoutt{
+    width:100%;
   }
 }

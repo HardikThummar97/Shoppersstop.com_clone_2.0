@@ -268,7 +268,7 @@ li.subtotal:before {
 }
 
 .quantity-field {
-  background-color: #ccc;
+  background-color:white;
   border: 1px solid #aaa;
   border-radius: 4px;
   font-size: 0.625rem;
@@ -398,7 +398,7 @@ aside {
   width: 100%;
   display: block;
   background: url("../img/Exit-Intent-Pop-Up-Creative-Strip-Web\ \(1\).webp");
-  height: 200px;
+  height: 180px;
   background-size: cover;
 }
 
@@ -466,7 +466,7 @@ aside {
   }
   .summary {
     -top: 1.25rem;
-    position:absolute;
+    position:sticky;
   }
 }
 

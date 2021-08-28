@@ -34,56 +34,89 @@
     <br />
 
     <main>
-      <div class="basket" id="bag">
-        <h1 style="font-size: 25px">Checkout</h1>
-        <hr />
-        <div class="Fields">
-          <div>
-            <div class="formContainer">
-              <form>
-                <div class="Fields">
-                  <div>
-                    <p class="pm">Billing Address</p>
-                    <label for="fname">Full Name</label>
-                    <input type="text" id="fname" name="firstname" />
-                    <label for="email"> Email</label>
-                    <input type="text" id="email" name="email" />
-                    <label for="adr"> Address</label>
-                    <input type="text" id="adr" name="address" />
-                  </div>
-                  <div>
-                    <p class="pm">Payment</p>
-                    <div>
-                      <label for="cname">Name on Card</label>
-                      <input type="text" id="cname" name="cardname" />
-                      <label for="ccnum">Credit card number</label>
+      <div id="checkoutt"> 
+        <div class="child">
+          
+             <h3 style="margin-left: 20px;">1.SIGIN IN</h3>
+             <h4 style="margin-left: 20px;">sima.com</h4>
 
-                      <input type="text" id="ccnum" name="cardnumber" />
-                    </div>
-
-                    <div class="Fields">
-                      <div>
-                        <label for="expyear">Exp Year</label>
-                        <input type="text" id="expyear" name="expyear" />
-                      </div>
-                      <div>
-                        <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" name="cvv" />
-                      </div>
-                      <br />
-                      <div>
-                        <button class="checkout-cta" onclick="openWin()">
-                          place Order
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+             <button id="change" style="color: #ff5d3b;"><B>CHANGE</B></button>
         </div>
-      </div>
+
+
+        <div class="child2">
+            <div class="delivery">
+              
+              <h2 style="margin-left: 20px;">1.delivery info</h2>
+             
+            </div>
+                <div class="address">
+                    <div  id="aa" onclick="a()">DELIVERY ADDRESS</div>
+                    <div id="bb" onclick="b()">EXPRESS STOR PICK UP</div>
+                </div>
+
+
+                    <div id="a1">
+                        <h3 style="margin-left: 20px;">Add New Address</h3>
+                <div style="margin-top: 20px;" >
+                    <div style="display: flex;margin-left: 20px;">
+                        <input placeholder="First name" class="fsname">
+                        <input placeholder="Second name" class="fsname">
+                    </div>
+                    <div class="div1">
+                        <input placeholder="-91" class="code">
+                        <input placeholder="Number" class="num">
+                    </div>
+                    <input placeholder="Pin Code" class="pincode">
+                    <div class="cs">
+                        <input placeholder="city" class="city">
+                        <input placeholder="state" class="city">
+                    </div>
+                    <div class="div2">
+                    <input placeholder="Address Line 1" class="Addresses">
+                    <input placeholder="Address Line 2 (optional)" class="Addresses">
+                </div>
+                </div>
+                
+                </div>
+               
+                <div id="a2">
+                    <div style="border-bottom: 1px solid rgb(138, 138, 138);border-top: 1px solid rgb(138, 138, 138) ;width: 600px;margin-left: 20px;">
+                    <h4>PICK UP</h4>
+                    
+                    <div style="display: flex;"><input type="checkbox" style="margin-right: 20px;" ><label style="margin-right: 20px;">self</label><input style="margin-right: 20px;" type="checkbox"><label>someone else</label></div>
+                
+                </div>
+
+                <h3 style="margin-left: 20px;">Add New Address</h3>
+                <div style="margin-top: 20px;" >
+                    <div style="display: flex;margin-left: 20px;">
+                        <input placeholder="First name" class="fsname">
+                        <input placeholder="Second name" class="fsname">
+                    </div>
+                    <div class="div1">
+                        <input placeholder="-91" class="code">
+                        <input placeholder="Number" class="num">
+                    </div>
+                    <input placeholder="Pin Code" class="pincode">
+                    <div class="cs">
+                        <input placeholder="city" class="city">
+                        <input placeholder="state" class="city">
+                    </div>
+                    <div class="div2">
+                    <input placeholder="Address Line 1" class="Addresses">
+                    <input placeholder="Address Line (optional)" class="Addresses">
+                </div>
+                </div>
+                
+                </div>  
+                <div id="btndiv">
+                  <button id="but">PROCEED TO PAY</button>
+                  </div>
+                    </div>
+                    
+                   
+                </div>
       <aside>
         <div class="summary">
           <div class="summary-total-items">ORDER SUMMERY</div>
@@ -141,5 +174,24 @@
 
   function openWin() {
     window.open("http://localhost:3000/home/thanks");
+  }
+
+  function a() {
+    var aa = document.getElementById("aa");
+    var bb = document.getElementById("bb");
+
+    var a1 = document.getElementById("a1");
+    var a2 = document.getElementById("a2");
+
+    a1.style.visibility = "visible";
+
+    a2.style.visibility = "hidden";
+  }
+  function b() {
+    var a1 = document.getElementById("a1");
+    var a2 = document.getElementById("a2");
+
+    a2.style.visibility = "visible";
+    a1.style.visibility = "hidden";
   }
 </script>
