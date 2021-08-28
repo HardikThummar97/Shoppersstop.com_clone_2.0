@@ -20,6 +20,9 @@ app.use("/products", productController);
 const cartController = require("./controllers/cart.controller");
 app.use("/cart", cartController);
 
+const userController = require("./controllers/user.controller");
+app.use("/users", userController);
+
 //Start connection;
 app.listen(3000, async () => {
   await connect();
