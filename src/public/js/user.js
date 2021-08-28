@@ -100,62 +100,68 @@ document
         }
       }
 
-      if (flag) {
-        let user1 = new details(name, email, mobile, password);
-        // person.push(user1);
-        fetch(`http://localhost:3000/users`, {
-          method: "POST",
-          body: JSON.stringify(user1),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-          .then(function (res) {
-            console.log("res: ", res);
+      function goLog() {
+        if (flag) {
+          let user1 = new details(name, email, mobile, password);
+          // person.push(user1);
+          fetch(`http://localhost:3000/users`, {
+            method: "POST",
+            body: JSON.stringify(user1),
+            headers: {
+              "Content-Type": "application/json",
+            },
           })
-          .catch(function (res) {
-            console.log("err: ", res);
-          });
+            .then(function (res) {
+              console.log("res: ", res);
+            })
+            .catch(function (res) {
+              console.log("err: ", res);
+            });
 
-        localStorage.setItem("loggedIn", JSON.stringify(name));
-        // localStorage.setItem("person", JSON.stringify(person));
+          localStorage.setItem("loggedIn", JSON.stringify(name));
+          // localStorage.setItem("person", JSON.stringify(person));
 
-        alert("Account created successfully");
+          alert("Account created successfully");
 
-        function goLog() {
           window.location.href = "";
         }
-        setTimeout(goLog(), 1000);
       }
+      setTimeout(goLog(), 1000);
     }
   });
 
-document.getElementById("sinbtn").addEventListener("click", async function () {
-  let em = document.getElementById("email2").value;
-  let pw = document.getElementById("password2").value;
+document
+  .getElementById("sinbtn")
+  .addEventListener("click", async function (event) {
+    event.preventDefault();
+    let em = document.getElementById("email2").value;
+    let pw = document.getElementById("password2").value;
 
-  // let user = JSON.parse(localStorage.getItem("person"));
+    // let user = JSON.parse(localStorage.getItem("person"));
 
-  let response = await fetch("http://localhost:3000/users");
-  let user = await response.json();
-  console.log("user:", user);
+    let response = await fetch("http://localhost:3000/users");
+    let user = await response.json();
+    console.log("user:", user);
 
-  let flag = false;
-  for (let i = 0; i < user.length; i++) {
-    if (
-      (user[i].email == em && user[i].password == pw) ||
-      (user[i].mobile == em && user[i].password == pw)
-    ) {
-      document.querySelector(".signin2").style.display = "none";
-      localStorage.setItem("loggedIn", JSON.stringify(user[i].name));
-      flag = true;
-      break;
+    let flag = false;
+    for (let i = 0; i < user.length; i++) {
+      if (
+        (user[i].email == em && user[i].password == pw) ||
+        (user[i].mobile == em && user[i].password == pw)
+      ) {
+        document.querySelector(".signin2").style.display = "none";
+        localStorage.setItem("loggedIn", JSON.stringify(user[i].name));
+        flag = true;
+        break;
+      }
     }
-  }
-  if (flag) {
-    alert("Signied In");
-    window.location.href = "";
-  } else {
-    alert("Your username or password is incorrect");
-  }
-});
+    function goLogIn() {
+      if (flag) {
+        alert("Signied In");
+        window.location.href = "";
+      } else {
+        alert("Your username or password is incorrect");
+      }
+    }
+    setTimeout(goLogIn(), 1000);
+  });
