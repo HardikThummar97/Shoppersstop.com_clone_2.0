@@ -397,7 +397,8 @@ aside {
   width: 100%;
   display: block;
   background: url("../img/Exit-Intent-Pop-Up-Creative-Strip-Web\ \(1\).webp");
-  height: 150px;
+  /* height: 150px; */
+  height: 11vw;
   background-size: contain;
 }
 

@@ -75,7 +75,7 @@ main {
   margin: 0 auto;
   overflow: hidden;
   padding: 1rem 0;
-  width:80%;
+  width: 80%;
   display: flex;
 }
 label {
@@ -167,7 +167,7 @@ aside {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  right: 30%;
+  /* right: 30%; */
 }
 
 .summary-total-items {
@@ -263,7 +263,6 @@ aside {
   width: 100%;
 }
 
-
 /*-------- newcss ----------*/
 
 #checkoutt {
@@ -272,7 +271,7 @@ aside {
 }
 
 .child {
-  width:80%;
+  width: 80%;
   height: 60px;
   background-color: #cecece;
   display: flex;
@@ -293,16 +292,15 @@ aside {
 }
 
 .child2 {
-  width:80%;
+  width: 80%;
   height: 700px;
   background-color: none;
   margin-top: 30px;
   border: 1px solid #cecece;
 }
 
-
 .delivery {
-  width:100%;
+  width: 100%;
   height: 70px;
   background-color: #cecece;
   display: flex;
@@ -310,8 +308,8 @@ aside {
 }
 
 .address {
-  width:60%;
-  height:50px;
+  width: 60%;
+  height: 50px;
   display: flex;
   margin-top: 10px;
   margin-left: 10px;
@@ -342,9 +340,8 @@ aside {
 #a1 {
   border-top: 2px solid #f5f5f0;
   height: 600px;
-  width:100%;
+  width: 100%;
 }
-
 
 .div1 {
   display: flex;
@@ -355,7 +352,7 @@ aside {
 .div2 {
   display: flex;
   flex-direction: column;
-  width:100%;
+  width: 100%;
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -376,7 +373,7 @@ aside {
   border: 1px solid #e0e0d1;
   height: 36px;
   margin-right: 20px;
-  width:45%;
+  width: 45%;
 }
 .code {
   border: 1px solid #e0e0d1;
@@ -390,14 +387,14 @@ aside {
   border: 1px solid #e0e0d1;
   height: 36px;
   margin-right: 20px;
-  width:84%;
+  width: 84%;
 }
 
 .pincode {
   border: 1px solid #e0e0d1;
   height: 36px;
   margin-right: 20px;
-  width:90%;
+  width: 90%;
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -411,7 +408,7 @@ aside {
   border: 1px solid #e0e0d1;
   height: 36px;
   margin-right: 20px;
-  width:45%;
+  width: 45%;
   background-color: #f5f5f0;
 }
 
@@ -419,16 +416,15 @@ aside {
   border: 1px solid #e0e0d1;
   height: 36px;
   margin-right: 20px;
-  width:90%;
+  width: 90%;
   margin-bottom: 20px;
 }
- input{
-   box-sizing: border-box;
-   padding-left: 10px;
- }
+input {
+  box-sizing: border-box;
+  padding-left: 10px;
+}
 
-
- @media screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
   aside,
   .basket,
   .summary,
@@ -477,7 +473,6 @@ aside {
   }
 }
 
-
 @media screen and (max-width: 960px) {
   main {
     width: 100%;
@@ -487,10 +482,10 @@ aside {
     padding: 0 1rem;
     width: 100%;
   }
-  aside{
+  aside {
     width: 100%;
   }
-  .summary{
-    right:0;
+  .summary {
+    right: 0;
   }
 }
