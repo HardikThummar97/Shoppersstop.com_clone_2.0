@@ -167,7 +167,6 @@ aside {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  right: 30%;
 }
 
 .summary-total-items {
@@ -294,12 +293,24 @@ aside {
 
 .child2 {
   width:80%;
-  height: 700px;
   background-color: none;
   margin-top: 30px;
   border: 1px solid #cecece;
 }
 
+#but11 {
+  height: 40px;
+  width: 300px;
+  background: linear-gradient(to right, #ff5d3b 0, #ff2c65 100%);
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.proceed{
+  width:100%;
+  text-align: right;
+}
 
 .delivery {
   width:100%;
@@ -341,8 +352,18 @@ aside {
 
 #a1 {
   border-top: 2px solid #f5f5f0;
-  height: 600px;
   width:100%;
+  /* visibility:visible; */
+  display: block;
+min-height: 600px;
+}
+
+#a3 {
+  border-top: 2px solid #f5f5f0;
+  width:100%;
+  /* visibility:visible; */
+  display: none;
+ min-height: 600px;
 }
 
 
@@ -361,8 +382,10 @@ aside {
 }
 
 #a2 {
-  height: 500px;
-  visibility: hidden;
+  /* visibility: hidden; */
+  position: relative;
+  display: none;
+  min-height: 600px;
 }
 
 .AdressLines {
@@ -401,6 +424,21 @@ aside {
   margin-left: 20px;
   margin-top: 20px;
 }
+.pincode1 {
+  border: 1px solid #e0e0d1;
+  height: 36px;
+  width:60%;
+  margin-left: 20px;
+  margin-top: 20px;
+  
+}
+#but2 {
+  color: red;
+  border: red 0.5px solid;
+  padding: 5px;
+  background-color: rgb(246, 226, 226);
+}
+
 
 .cs {
   display: flex;
@@ -493,4 +531,7 @@ aside {
   .summary{
     right:0;
   }
+  #but11 {
+    width:100%;
+}
 }

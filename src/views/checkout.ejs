@@ -56,7 +56,7 @@
                 </div>
 
 
-                    <div id="a1">
+                    <div id="a2">
                         <h3 style="margin-left: 20px;">Add New Address</h3>
                 <div style="margin-top: 20px;" >
                     <div style="display: flex;margin-left: 20px;">
@@ -77,43 +77,50 @@
                     <input placeholder="Address Line 2 (optional)" class="Addresses">
                 </div>
                 </div>
+                <div class="proceed">
+                  <button id="but11">PROCEED</button>
+                </div>
+                      
+              </div>
+
+              <div id="a1">
+                        <h3 style="margin-left: 20px;">CHECK STORE AVAILABILITY</h3>
+                <div style="margin-top: 20px;" >
+                    
+                    <input placeholder="Enter pin Code" class="pincode1">
+                    <button id="but2">CHECK</button>
+                    
+                </div>
+                <div class="proceed">
+                  <button id="but11">PROCEED TO PAY</button>
+                </div>
+
+                <div id="a3">
+                  <h3 style="margin-left: 20px;">Pay via debit card</h3>
+                  <input placeholder="name on card" class="">
+                  <input placeholder="Enter card number" class="">
+                  <input placeholder="Enter expiry year" class="">
+                  <input placeholder="CVV" class="">
+           <div style="margin-top: 20px;" >
+            <h3 style="margin-left: 20px;">Cash on delhivery</h3>     
+          </div>
+          <div class="proceed">
+            <button id="but122">PAY</button>
+          </div>
+                      
+              </div>
+        
+      </div> 
                 
                 </div>
                
-                <div id="a2">
-                    <div style="border-bottom: 1px solid rgb(138, 138, 138);border-top: 1px solid rgb(138, 138, 138) ;width: 600px;margin-left: 20px;">
-                    <h4>PICK UP</h4>
-                    
-                    <div style="display: flex;"><input type="checkbox" style="margin-right: 20px;" ><label style="margin-right: 20px;">self</label><input style="margin-right: 20px;" type="checkbox"><label>someone else</label></div>
-                
+
+              
                 </div>
-
-                <h3 style="margin-left: 20px;">Add New Address</h3>
-                <div style="margin-top: 20px;" >
-                    <div style="display: flex;margin-left: 20px;">
-                        <input placeholder="First name" class="fsname">
-                        <input placeholder="Second name" class="fsname">
-                    </div>
-                    <div class="div1">
-                        <input placeholder="-91" class="code">
-                        <input placeholder="Number" class="num">
-                    </div>
-                    <input placeholder="Pin Code" class="pincode">
-                    <div class="cs">
-                        <input placeholder="city" class="city">
-                        <input placeholder="state" class="city">
-                    </div>
-                    <div class="div2">
-                    <input placeholder="Address Line 1" class="Addresses">
-                    <input placeholder="Address Line (optional)" class="Addresses">
-                </div>
-
-
+          
                 
                 </div>
                 
-                </div> 
-                <div style="border: 1px solid black; width: 100%; height:100px; background-color: blueviolet;"></div>
                 </div> 
                 
                     </div>  
@@ -184,16 +191,36 @@
 
     var a1 = document.getElementById("a1");
     var a2 = document.getElementById("a2");
+    var a3 = document.getElementById("a3");
 
-    a1.style.visibility = "visible";
+    // a1.style.visibility = "visible";
 
-    a2.style.visibility = "hidden";
+    // a2.style.visibility = "hidden";
+
+    a2.style.display = "block";
+    a1.style.display = "none";
+
+    document.getElementById("but11").addEventListener("click",function(){
+     a3.style.display = "block";
+     a1.style.display = "none";
+     a2.style.display = "none";
+    });
   }
   function b() {
     var a1 = document.getElementById("a1");
     var a2 = document.getElementById("a2");
+    var a3 = document.getElementById("a3");
 
-    a2.style.visibility = "visible";
-    a1.style.visibility = "hidden";
+    a1.style.display = "block";
+    a2.style.display = "none";
+
+    // a2.style.visibility = "visible";
+    // a1.style.visibility = "hidden";
+
+    document.getElementById("but11").addEventListener("click",function(){
+     a3.style.display = "block";
+     a1.style.display = "none";
+     a2.style.display = "none";
+    });
   }
 </script>
