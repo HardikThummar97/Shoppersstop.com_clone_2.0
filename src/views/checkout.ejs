@@ -37,7 +37,7 @@
       <div id="checkoutt">
         <div class="child">
           <h3 style="margin-left: 20px; float: left">1.SINING IN</h3>
-          <h4 style="margin-left: 20px; float: left">sima.com</h4>
+          <h4 id="user" style="margin-left: 20px; float: left">sima.com</h4>
 
           <button id="change1" style="color: #ff5d3b"><B>CHANGE</B></button>
         </div>
@@ -72,40 +72,45 @@
                     <input placeholder="Address Line 2 (optional)" class="Addresses">
                 </div>
                 </div>
-                <div class="proceed">
-                  <button id="but11">PROCEED</button>
-                </div>
+                <!-- <div class="proceed">
+                  <button id="but11">PROCEED TO PAY</button>
+                </div> -->
                       
               </div>
 
               <div id="a1">
-                        <h3 style="margin-left: 20px;">CHECK STORE AVAILABILITY</h3>
+                        <h3 style="margin-left: 20px; margin-top:20px">CHECK STORE AVAILABILITY</h3>
                 <div style="margin-top: 20px;" >
                     
                     <input placeholder="Enter pin Code" class="pincode1">
                     <button id="but2">CHECK</button>
                     
                 </div>
-                <div class="proceed">
+                <!-- <div class="proceed">
                   <button id="but11">PROCEED TO PAY</button>
-                </div>
+                </div> -->
 
-                <div id="a3">
-                  <h3 style="margin-left: 20px;">Pay via debit card</h3>
-                  <input placeholder="name on card" class="">
-                  <input placeholder="Enter card number" class="">
-                  <input placeholder="Enter expiry year" class="">
-                  <input placeholder="CVV" class="">
-           <div style="margin-top: 20px;" >
-            <h3 style="margin-left: 20px;">Cash on delhivery</h3>     
-          </div>
-          <div class="proceed">
-            <button id="but122">PAY</button>
-          </div>
-                      
-              </div>
+    
         
       </div> 
+      <div id="a3">
+        
+    <div> <h3 style="margin: 20px;">Pay via debit card</h3></div>
+       
+       
+        <input placeholder="name on card" class="pincode">
+        <input placeholder="Enter card number" class="pincode">
+        <div style="margin:20px;">
+        <input placeholder="Enter expiry year" class="city">
+        <input placeholder="CVV" class="code">
+ <div >
+  <h3 style="margin-top:20px">Cash on delhivery</h3>   
+</div>
+<div class="proceed">
+  <button id="but11" onclick="openWin()">PAY</button>
+</div>
+            
+    </div>
                 
                 </div>
                
@@ -176,6 +181,10 @@
   }
   appendTotal();
 
+  let user = document.getElementById("user");
+  let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+  user.innerHTML =loggedIn;
+
   function openWin() {
     window.open("http://localhost:3000/home/thanks");
   }
@@ -195,11 +204,7 @@
     a2.style.display = "block";
     a1.style.display = "none";
 
-    document.getElementById("but11").addEventListener("click",function(){
-     a3.style.display = "block";
-     a1.style.display = "none";
-     a2.style.display = "none";
-    });
+   
   }
   function b() {
     var a1 = document.getElementById("a1");
@@ -212,10 +217,8 @@
     // a2.style.visibility = "visible";
     // a1.style.visibility = "hidden";
 
-    document.getElementById("but11").addEventListener("click",function(){
-     a3.style.display = "block";
-     a1.style.display = "none";
-     a2.style.display = "none";
-    });
   }
+
+
+  
 </script>
