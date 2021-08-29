@@ -11,17 +11,18 @@ Shoppers-Stop Clone 2.0 project where. you can create a product, add the product
 - [@SeemaAlam](https://github.com/SeemaAlam)
 
   
-![Logo](https://www.shoppersstop.com/)
+![Logo](https://prodstatic.shoppersstop.com/_ui/responsive/common/assets/images/sslogo.svg)
 
     
 ## Demo video
 
-<!-- https://drive.google.com/file/d/18IfJ3uv7qatidgjfYUsBY4WNQfstHWyC/view?usp=sharing -->
+https://drive.google.com/file/d/1Dm9LRDIcGP8AipVkabh-XMUWu5BbJAJX/view?usp=sharing
 
   
 ## Screenshots
 
-<!-- https://drive.google.com/drive/folders/1r2GhP5j0YYWr-MBFv0eXX2s4wmrKGOG7?usp=sharing -->
+https://drive.google.com/drive/folders/1iuOB6LFV-zG3rlKATQQaEkxFiO2fCZmJ?usp=sharing
+
 ## Run Locally
 
 Clone the project

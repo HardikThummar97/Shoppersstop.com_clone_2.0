@@ -270,7 +270,7 @@ aside {
 }
 
 .child {
-  width: 80%;
+  width: 95%;
   height: 60px;
   background-color: #cecece;
   display: flex;
@@ -291,7 +291,7 @@ aside {
 }
 
 .child2 {
-  width: 80%;
+  width: 95%;
   background-color: none;
   margin-top: 30px;
   border: 1px solid #cecece;
@@ -527,6 +527,10 @@ input {
     right: 0;
   }
   #but11 {
+    width: 100%;
+  }
+  .child,
+  .child2 {
     width: 100%;
   }
 }
