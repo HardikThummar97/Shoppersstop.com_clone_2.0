@@ -45,13 +45,22 @@ async function showcart() {
 showcart();
 
 function openWin() {
-  let total = document.getElementById("basket-total").innerText;
-  localStorage.setItem("basket-total", JSON.stringify(total));
+  let isLoggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+  if (isLoggedIn == null) {
+    isLoggedIn = "";
+  }
+  if (isLoggedIn == "") {
+    alert("Please Sign In to checkout !");
+    window.location.href = "http://localhost:3000/home";
+  } else {
+    let total = document.getElementById("basket-total").innerText;
+    localStorage.setItem("basket-total", JSON.stringify(total));
 
-  let subtotal = document.getElementById("basket-subtotal").innerText;
-  localStorage.setItem("basket-subtotal", JSON.stringify(subtotal));
+    let subtotal = document.getElementById("basket-subtotal").innerText;
+    localStorage.setItem("basket-subtotal", JSON.stringify(subtotal));
 
-  window.open("http://localhost:3000/home/checkout");
+    window.location.href = "http://localhost:3000/home/checkout";
+  }
 }
 
 /* Set values + misc */

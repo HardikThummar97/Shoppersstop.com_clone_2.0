@@ -131,7 +131,7 @@ main {
   margin: 0 auto;
   overflow: hidden;
   padding: 1rem 0;
-  width:70%;
+  width: 90%;
 }
 
 .basket,
@@ -143,7 +143,7 @@ aside {
 }
 
 .basket {
-  width:70%;
+  width: 70%;
 }
 
 .basket-module {
@@ -268,7 +268,7 @@ li.subtotal:before {
 }
 
 .quantity-field {
-  background-color:white;
+  background-color: white;
   border: 1px solid #aaa;
   border-radius: 4px;
   font-size: 0.625rem;
@@ -279,11 +279,11 @@ li.subtotal:before {
 aside {
   float: right;
   position: relative;
-  width:25%;
+  width: 25%;
 }
 
 .summary {
-  background-color:white;
+  background-color: white;
   border: 1px solid #aaa;
   padding: 1rem;
   position: fixed;
@@ -294,30 +294,29 @@ aside {
 }
 
 .summary-total-items {
-  color:black;
+  color: black;
   font-size: 15px;
   font-weight: bold;
   text-align: center;
   /* height: max-content; */
 }
-#sb{
-  font-size:23px;
+#sb {
+  font-size: 23px;
   font-weight: bold;
 }
-#pc{
+#pc {
   height: 100px;
-  width:100%;
+  width: 100%;
   background-color: rgb(228, 228, 228);
   padding: 10px;
-
 }
-#checkbtn{
+#checkbtn {
   color: red;
   border: red 0.5px solid;
-  padding: 5px;;
+  padding: 5px;
   background-color: rgb(246, 226, 226);
 }
-#cbx{
+#cbx {
   margin-left: 100px;
 }
 
@@ -387,23 +386,24 @@ aside {
   text-transform: uppercase;
   padding: 0.625rem 0;
   width: 70%;
-  margin:auto;
+  margin: auto;
   font-weight: bolder;
-  font-size:12px;
-  border-radius: 5px;;
+  font-size: 12px;
+  border-radius: 5px;
   background: linear-gradient(to right, #ff5d3b 0, #ff2c65 100%);
 }
 
-.container-fluid{
+.container-fluid {
   width: 100%;
   display: block;
   background: url("../img/Exit-Intent-Pop-Up-Creative-Strip-Web\ \(1\).webp");
-  height: 180px;
-  background-size: cover;
+  height: 150px;
+  background-size: contain;
 }
 
-#ep,#checkbtn{
-  height:28px;
+#ep,
+#checkbtn {
+  height: 28px;
 }
 
 .summary-delivery-selection {
@@ -415,10 +415,10 @@ aside {
   height: 34px;
   width: 100%;
 }
-#footerdiv{
+#footerdiv {
   height: 200px;
-  width:60%;
-  margin-left:10%;
+  width: 60%;
+  margin-left: 10%;
 }
 
 @media screen and (max-width: 640px) {
@@ -466,7 +466,7 @@ aside {
   }
   .summary {
     -top: 1.25rem;
-    position:sticky;
+    position: sticky;
   }
 }
 
