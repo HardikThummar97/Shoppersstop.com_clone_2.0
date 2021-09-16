@@ -2,12 +2,10 @@ let isLoggedIn = JSON.parse(localStorage.getItem("loggedIn"));
 if (isLoggedIn == null) {
   isLoggedIn = "";
 }
-console.log("isLoggedIn:", isLoggedIn);
 
 let signInBtn = document.getElementById("si2");
 let signUpBtn = document.getElementById("su1");
 let profileBtn = document.querySelector(".profile-icon img");
-console.log("profileBtn:", profileBtn);
 if (isLoggedIn != "") {
   signInBtn.innerHTML = `<a>${isLoggedIn}</a>`;
   signUpBtn.innerHTML = `<a>SIGN OUT</a>`;
@@ -142,7 +140,7 @@ document
             },
           })
             .then(function (res) {
-              console.log("res: ", res);
+              return res.json();
             })
             .catch(function (res) {
               console.log("err: ", res);
@@ -171,7 +169,6 @@ document
 
     let response = await fetch("http://localhost:3000/users");
     let user = await response.json();
-    console.log("user:", user);
 
     let flag = false;
     for (let i = 0; i < user.length; i++) {

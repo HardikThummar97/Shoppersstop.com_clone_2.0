@@ -1,5 +1,4 @@
 let id = JSON.parse(localStorage.getItem("id"));
-// console.log("id:", id);
 
 fetch(`http://localhost:3000/products/${id}`)
   .then((response) => response.json())
@@ -76,16 +75,13 @@ function productDescc(item) {
 async function addToCart() {
   let response = await fetch(`http://localhost:3000/cart/${id}`);
   let cartProduct = await response.json();
-  // console.log("cartProduct:", cartProduct.product);
 
   if (cartProduct.product == null) {
     let response = await fetch(`http://localhost:3000/products/${id}`);
     let cartObj = await response.json();
     cartObj.quantity = 1;
-    console.log("cartObj:", cartObj);
 
     let product = JSON.stringify(cartObj);
-    console.log("product:", product);
 
     fetch(`http://localhost:3000/cart`, {
       method: "POST",
@@ -95,21 +91,20 @@ async function addToCart() {
       },
     })
       .then(function (res) {
-        console.log("res: ", res);
+        return res.json();
       })
       .catch(function (res) {
-        console.log("errr: ", res);
+        console.log("err: ", res);
       });
 
     //Also ading to local storage, to effectively render cart page;
     let response1 = await fetch(`http://localhost:3000/cart`);
     let cartObj1 = await response1.json();
     localStorage.setItem("cart", JSON.stringify(cartObj1.cart));
-    
+
     window.location.href = "http://localhost:3000/home/cart";
   } else {
     alert("Product already added in cart");
     window.location.href = "http://localhost:3000/home/cart";
   }
-  
 }

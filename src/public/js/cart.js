@@ -1,7 +1,6 @@
 // fetch(`http://localhost:3000/cart`)
 //   .then((response) => response.json())
 //   .then((data) => {
-//     console.log("data:", data);
 //     showcart(data.cart);
 //   });
 
@@ -154,7 +153,6 @@ function recalculateCart(onlyTotal) {
 
 /* Update quantity */
 function updateQuantity(quantityInput) {
-  console.log("quantityInput:", quantityInput);
   /* Calculate line price */
   var index = $(quantityInput)
     .parent()
@@ -164,7 +162,6 @@ function updateQuantity(quantityInput) {
   var productRow = $(quantityInput).parent().parent();
   var price = parseFloat(productRow.children(".price").text());
   var quantity = $(quantityInput).val();
-  console.log("quantity:", quantity);
   var linePrice = price * quantity;
 
   /* Update line price display and recalc cart totals */
@@ -190,9 +187,7 @@ function updateQuantity(quantityInput) {
     headers: {
       "Content-Type": "application/json",
     },
-  })
-    .then((res) => res.json())
-    .then((res) => console.log(res));
+  }).then((res) => res.json());
 
   //update quantity in local;
   let cart = JSON.parse(localStorage.getItem("cart"));
@@ -214,12 +209,9 @@ function removeItem(removeButton) {
 
   //Delete from database;
   let id = removeButton.id;
-  console.log("id:", id);
   fetch(`http://localhost:3000/cart/${id}`, {
     method: "DELETE",
-  })
-    .then((res) => res.json())
-    .then((res) => console.log(res));
+  }).then((res) => res.json());
 
   //Delete from local;
   cart.splice(removeButton.value, 1);

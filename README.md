@@ -30,6 +30,16 @@ Clone the project
 ```bash
   git clone https://github.com/HardikThummar97/Shoppersstop.com_clone_2.0.git
 ```
+Open project directory in terminal and run project using command:
+
+```bash
+  npm run server
+```
+Use below link in browser to explore the project.
+
+```bash
+   http://localhost:3000/home
+```
 
 ## Tech Stack
 

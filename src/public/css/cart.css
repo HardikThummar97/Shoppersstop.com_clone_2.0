@@ -286,6 +286,7 @@ aside {
   background-color: white;
   border: 1px solid #aaa;
   padding: 1rem;
+  min-width: 200px;
   /* position: fixed; */
   width: 250px;
   -webkit-box-sizing: border-box;

@@ -59,7 +59,6 @@ async function sortHigh() {
         result.push(data[i]);
       }
     }
-    console.log(result);
     showProducts(result);
   } else {
     showProducts(data);
@@ -80,7 +79,6 @@ async function sortLow() {
         result.push(data[i]);
       }
     }
-    console.log(result);
     showProducts(result);
   } else {
     showProducts(data);
@@ -132,7 +130,6 @@ async function blue() {
   if (click.checked) {
     // let data = JSON.parse(localStorage.getItem("items"));
     let result = [];
-    console.log(data[0].img);
     for (let i = 0; i < data.length; i++) {
       if (
         data[i].img_1 ==
@@ -240,7 +237,6 @@ async function pink() {
   if (click.checked) {
     // let data = JSON.parse(localStorage.getItem("items"));
     let result = [];
-    console.log(data[0].img);
     for (let i = 0; i < data.length; i++) {
       if (
         data[i].img_1 ==
