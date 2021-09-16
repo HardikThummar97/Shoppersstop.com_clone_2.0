@@ -55,20 +55,20 @@
                         <h3 style="margin-left: 20px; margin-top:15px">Add New Address</h3>
                 <div style="margin-top: 20px;" >
                     <div style="display: flex;margin-left: 20px;">
-                        <input placeholder="First name" class="fsname">
-                        <input placeholder="Last name" class="fsname">
+                        <input placeholder="First name" id="fname" class="fsname">
+                        <input placeholder="Last name" id="lname" class="fsname">
                     </div>
                     <div class="div1">
-                        <input type="number" placeholder="-91" class="code">
-                        <input type="number" placeholder="Number" class="num">
+                        <input type="number" placeholder="+91" class="code">
+                        <input type="number" placeholder="Number" id="num" class="num">
                     </div>
-                    <input type="number" placeholder="Pin Code" class="pincode">
+                    <input type="number" placeholder="Pin Code" id="pin" class="pincode">
                     <div class="cs">
-                        <input placeholder="city" class="city">
-                        <input placeholder="state" class="city">
+                        <input placeholder="city" id="city" class="city">
+                        <input placeholder="state" id="state" class="city">
                     </div>
                     <div class="div2">
-                    <input placeholder="Address Line 1" class="Addresses">
+                    <input placeholder="Address Line 1" id="add1" class="Addresses">
                     <input placeholder="Address Line 2 (optional)" class="Addresses">
                 </div>
                 </div>
@@ -98,11 +98,11 @@
     <div> <h3 style="margin: 20px;">Pay via debit card</h3></div>
        
        
-        <input placeholder="name on card" class="pincode">
-        <input type="number" placeholder="Enter card number" class="pincode">
+        <input placeholder="name on card" id="cardname" class="pincode">
+        <input type="number" placeholder="Enter card number" id="cardnumber" class="pincode">
         <div style="margin:20px;">
-        <input type="number" placeholder="Enter expiry year" class="city">
-        <input type="password" placeholder="CVV" class="code">
+        <input type="number" placeholder="Enter expiry year" id="exp" class="city">
+        <input type="password" placeholder="CVV" id="cvv" class="code">
  <div >
   <h3 style="margin-top:20px">Cash on delhivery</h3>   
 </div>
@@ -186,7 +186,35 @@
   user.innerHTML =loggedIn;
 
   function openWin() {
-    window.open("http://localhost:3000/home/thanks");
+    // window.location.href="http://localhost:3000/home/thanks";
+    let fname = document.getElementById("fname").value;
+    let lname = document.getElementById("lname").value;
+    let num = document.getElementById("num").value;
+    let pin = document.getElementById("pin").value;
+    let city = document.getElementById("city").value;
+    let state = document.getElementById("state").value;
+    let address = document.getElementById( "add1" ).value;
+    
+    let cardname = document.getElementById( "cardname" ).value;
+    let cardnumber = document.getElementById( "cardnumber" ).value;
+    let exp = document.getElementById( "exp" ).value;
+    let cvv = document.getElementById( "cvv" ).value;
+if ( document.getElementById( 'a2' ).style.display == 'block' ) {
+    if ( !fname || !lname || !num || !pin || !city || !state || !address) {
+            alert("Please fill all details")
+    } else if ( !cardname || !cardnumber || !exp || !cvv ) {
+        alert("Enter valid card details")
+    } else {
+        window.location.href="http://localhost:3000/home/thanks";
+        }
+} else {
+    if ( !cardname || !cardnumber || !exp || !cvv ) {
+        alert( "Enter valid card details" )
+    } else {
+        window.location.href = "http://localhost:3000/home/thanks";
+    }
+}
+
   }
 
   function a() {
