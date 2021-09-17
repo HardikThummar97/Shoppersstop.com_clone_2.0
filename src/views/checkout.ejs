@@ -1,229 +1,229 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="/static/css/checkout.css" />
 
-    <title>Checkout</title>
-    <link rel="icon" href="/static/img/logo.jpg" type="image/x-icon" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="/static/css/checkout.css" />
 
-  <body>
-    <header class="home-header">
-      <div class="left-header">
-        <div class="stores-contact">
-          <a href="http://localhost:3000/home/productList"
-            ><img src="/static/img/H1.png"
-          /></a>
-        </div>
-        <div class="head-logo">
-          <a href="http://localhost:3000/home"
-            ><img
-              src="	https://prodstatic.shoppersstop.com/_ui/responsive/common/assets/images/sslogo.svg"
-          /></a>
-        </div>
+  <title>Checkout</title>
+  <link rel="icon" href="/static/img/logo.jpg" type="image/x-icon" />
+</head>
+
+<body>
+  <header class="home-header">
+    <div class="left-header">
+      <div class="stores-contact">
+        <a href="http://localhost:3000/home/productList"><img src="/static/img/H1.png" /></a>
       </div>
-      <div class="right-header">
-        <img src="/static/img/H3.png" />
+      <div class="head-logo">
+        <a href="http://localhost:3000/home"><img
+            src="	https://prodstatic.shoppersstop.com/_ui/responsive/common/assets/images/sslogo.svg" /></a>
       </div>
-    </header>
-    <!-- Header close -->
-    <br /><br /><br />
-    <br /><br />
-    <br />
-
-    <main>
-      <div id="checkoutt">
-        <div class="child">
-          <h3 style="margin-left: 20px; float: left">1.SINING IN</h3>
-          <h4 id="user" style="margin-left: 20px; float: left">sima.com</h4>
-
-          <button id="change1" style="color: #ff5d3b"><B>CHANGE</B></button>
-        </div>
-
-        <div class="child2">
-          <div class="delivery">
-            <h2 style="margin-left: 20px">1.delivery info</h2>
-          </div>
-          <div class="address">
-            <div id="aa" onclick="a()">DELIVERY ADDRESS</div>
-            <div id="bb" onclick="b()">EXPRESS STOR PICK UP</div>
-          </div>
-
-                    <div id="a2">
-                        <h3 style="margin-left: 20px; margin-top:15px">Add New Address</h3>
-                <div style="margin-top: 20px;" >
-                    <div style="display: flex;margin-left: 20px;">
-                        <input placeholder="First name" id="fname" class="fsname">
-                        <input placeholder="Last name" id="lname" class="fsname">
-                    </div>
-                    <div class="div1">
-                        <input type="number" placeholder="+91" class="code">
-                        <input type="number" placeholder="Number" id="num" class="num">
-                    </div>
-                    <input type="number" placeholder="Pin Code" id="pin" class="pincode">
-                    <div class="cs">
-                        <input placeholder="city" id="city" class="city">
-                        <input placeholder="state" id="state" class="city">
-                    </div>
-                    <div class="div2">
-                    <input placeholder="Address Line 1" id="add1" class="Addresses">
-                    <input placeholder="Address Line 2 (optional)" class="Addresses">
-                </div>
-                </div>
-                <!-- <div class="proceed">
-                  <button id="but11">PROCEED TO PAY</button>
-                </div> -->
-                      
-              </div>
-
-              <div id="a1">
-                        <h3 style="margin-left: 20px; margin-top:20px">CHECK STORE AVAILABILITY</h3>
-                <div style="margin-top: 20px;" >
-                    
-                    <input type="number" placeholder="Enter pin Code" class="pincode1">
-                    <button id="but2">CHECK</button>
-                    
-                </div>
-                <!-- <div class="proceed">
-                  <button id="but11">PROCEED TO PAY</button>
-                </div> -->
-
-    
-        
-      </div> 
-      <div id="a3">
-        
-    <div> <h3 style="margin: 20px;">Pay via debit card</h3></div>
-       
-       
-        <input placeholder="name on card" id="cardname" class="pincode">
-        <input type="number" placeholder="Enter card number" id="cardnumber" class="pincode">
-        <div style="margin:20px;">
-        <input type="number" placeholder="Enter expiry year" id="exp" class="city">
-        <input type="password" placeholder="CVV" id="cvv" class="code">
- <div >
-  <h3 style="margin-top:20px">Cash on delhivery</h3>   
-</div>
-<div class="proceed">
-  <button id="but11" onclick="openWin()">PAY</button>
-</div>
-            
     </div>
-                
-                </div>
-               
+    <div class="right-header">
+      <img src="/static/img/H3.png" />
+    </div>
+  </header>
+  <!-- Header close -->
+  <br /><br /><br />
+  <br /><br />
+  <br />
 
-              
-                </div>
-          
-                
-                </div>
-                
-                </div> 
-                
-                    </div>  
-                   
-                    
-      <aside>
-        <div class="summary">
-          <div class="summary-total-items">ORDER SUMMERY</div>
-          <br />
-          <div class="summary-subtotal">
-            <div class="subtotal-title">Subtotal</div>
-            <div class="subtotal-value final-value" id="basket-subtotal">
-              4194
-            </div>
-            <div class="subtotal-title">Gift Packaging</div>
-            <div class="subtotal-value final-value" id="">Free</div>
-            <div class="summary-subtotal">
-              <div class="subtotal-title">Delivery Charges</div>
-              <div class="subtotal-value final-value" id="basket-subtotal">
-                100
-              </div>
+  <main>
+    <div id="checkoutt">
+      <div class="child">
+        <h3 style="margin-left: 20px; float: left">1.SINING IN</h3>
+        <h4 id="user" style="margin-left: 20px; float: left">sima.com</h4>
 
-              <div class="summary-total">
-                <div class="total-title">Total</div>
-                <div class="total-value final-value" id="basket-total">
-                  4294
-                </div>
-              </div>
-            </div>
-            <div>
-              <p style="color: gray; font-size: 10">
-                No Delivery charges for Express Store Pickup.
-              </p>
-              <br />
-              <p style="color: gray; font-size: 10">
-                Do you have a gift card or and electronic gift voucher? Use it
-                at the payment page.
-              </p>
-            </div>
-            <br />
-            <br />
-          </div>
+        <button id="change1" style="color: #ff5d3b"><B>CHANGE</B></button>
+      </div>
+
+      <div class="child2">
+        <div class="delivery">
+          <h2 style="margin-left: 20px">1.delivery info</h2>
         </div>
-      </aside>
-    </main>
-  </body>
+        <div class="address">
+          <div id="aa" onclick="a()">DELIVERY ADDRESS</div>
+          <div id="bb" onclick="b()">EXPRESS STORE PICK UP</div>
+        </div>
+
+        <div id="a2">
+          <h3 style="margin-left: 20px; margin-top:15px">Add New Address</h3>
+          <div style="margin-top: 20px;">
+            <div style="display: flex;margin-left: 20px;">
+              <input placeholder="First name" id="fname" class="fsname">
+              <input placeholder="Last name" id="lname" class="fsname">
+            </div>
+            <div class="div1">
+              <input type="number" placeholder="+91" class="code">
+              <input type="number" placeholder="Number" id="num" class="num">
+            </div>
+            <input type="number" placeholder="Pin Code" id="pin" class="pincode">
+            <div class="cs">
+              <input placeholder="city" id="city" class="city">
+              <input placeholder="state" id="state" class="city">
+            </div>
+            <div class="div2">
+              <input placeholder="Address Line 1" id="add1" class="Addresses">
+              <input placeholder="Address Line 2 (optional)" class="Addresses">
+            </div>
+          </div>
+          <!-- <div class="proceed">
+                  <button id="but11">PROCEED TO PAY</button>
+                </div> -->
+
+        </div>
+
+        <div id="a1">
+          <h3 style="margin-left: 20px; margin-top:20px">CHECK STORE AVAILABILITY</h3>
+          <div style="margin-top: 20px;">
+
+            <input type="number" placeholder="Enter pin Code" class="pincode1">
+            <button id="but2">CHECK</button>
+
+          </div>
+          <!-- <div class="proceed">
+                  <button id="but11">PROCEED TO PAY</button>
+                </div> -->
+
+
+
+        </div>
+        <div id="a3">
+
+          <div>
+            <h3 style="margin: 20px;">Pay via debit card</h3>
+          </div>
+
+
+          <input placeholder="name on card" id="cardname" class="pincode">
+          <input type="number" placeholder="Enter card number" id="cardnumber" class="pincode">
+          <div style="margin:20px;">
+            <input type="number" placeholder="Enter expiry year" id="exp" class="city">
+            <input type="password" placeholder="CVV" id="cvv" class="code">
+            <div>
+              <h3 style="margin-top:20px">Cash on delhivery</h3>
+            </div>
+            <div class="proceed">
+              <button id="but11" onclick="openWin()">PAY</button>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+
+    </div>
+
+    </div>
+
+
+    <aside>
+      <div class="summary">
+        <div class="summary-total-items">ORDER SUMMERY</div>
+        <br />
+        <div class="summary-subtotal">
+          <div class="subtotal-title">Subtotal</div>
+          <div class="subtotal-value final-value" id="basket-subtotal">
+            4194
+          </div>
+          <div class="subtotal-title">Gift Packaging</div>
+          <div class="subtotal-value final-value" id="">Free</div>
+          <div class="summary-subtotal">
+            <div class="subtotal-title">Delivery Charges</div>
+            <div class="subtotal-value final-value" id="basket-subtotal">
+              100
+            </div>
+
+            <div class="summary-total">
+              <div class="total-title">Total</div>
+              <div class="total-value final-value" id="basket-total">
+                4294
+              </div>
+            </div>
+          </div>
+          <div>
+            <p style="color: gray; font-size: 10">
+              No Delivery charges for Express Store Pickup.
+            </p>
+            <br />
+            <p style="color: gray; font-size: 10">
+              Do you have a gift card or and electronic gift voucher? Use it
+              at the payment page.
+            </p>
+          </div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </aside>
+  </main>
+</body>
+
 </html>
 
 <script>
   function appendTotal() {
-    let total = JSON.parse(localStorage.getItem("basket-total"));
-    let basket_total = document.getElementById("basket-total");
+    let total = JSON.parse( localStorage.getItem( "basket-total" ) );
+    let basket_total = document.getElementById( "basket-total" );
     basket_total.innerText = "₹ " + total;
 
-    let subtotal = JSON.parse(localStorage.getItem("basket-subtotal"));
-    let basket_subtotal = document.getElementById("basket-subtotal");
+    let subtotal = JSON.parse( localStorage.getItem( "basket-subtotal" ) );
+    let basket_subtotal = document.getElementById( "basket-subtotal" );
     basket_subtotal.innerText = "₹ " + subtotal;
   }
   appendTotal();
 
-  let user = document.getElementById("user");
-  let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
-  user.innerHTML =loggedIn;
+  let user = document.getElementById( "user" );
+  let loggedIn = JSON.parse( localStorage.getItem( "loggedIn" ) );
+  user.innerHTML = loggedIn;
 
   function openWin() {
     // window.location.href="http://localhost:3000/home/thanks";
-    let fname = document.getElementById("fname").value;
-    let lname = document.getElementById("lname").value;
-    let num = document.getElementById("num").value;
-    let pin = document.getElementById("pin").value;
-    let city = document.getElementById("city").value;
-    let state = document.getElementById("state").value;
-    let address = document.getElementById( "add1" ).value;
-    
-    let cardname = document.getElementById( "cardname" ).value;
-    let cardnumber = document.getElementById( "cardnumber" ).value;
-    let exp = document.getElementById( "exp" ).value;
-    let cvv = document.getElementById( "cvv" ).value;
-if ( document.getElementById( 'a2' ).style.display == 'block' ) {
-    if ( !fname || !lname || !num || !pin || !city || !state || !address) {
-            alert("Please fill all details")
-    } else if ( !cardname || !cardnumber || !exp || !cvv ) {
-        alert("Enter valid card details")
-    } else {
-        window.location.href="http://localhost:3000/home/thanks";
-        }
-} else {
-    if ( !cardname || !cardnumber || !exp || !cvv ) {
+    let fname = document.getElementById( "fname" ).value.trim();
+    let lname = document.getElementById( "lname" ).value.trim();
+    let num = document.getElementById( "num" ).value.trim();
+    let pin = document.getElementById( "pin" ).value.trim();
+    let city = document.getElementById( "city" ).value.trim();
+    let state = document.getElementById( "state" ).value.trim();
+    let address = document.getElementById( "add1" ).value.trim();
+
+    let cardname = document.getElementById( "cardname" ).value.trim();
+    let cardnumber = document.getElementById( "cardnumber" ).value.trim();
+    let exp = document.getElementById( "exp" ).value.trim();
+    let cvv = document.getElementById( "cvv" ).value.trim();
+    if ( document.getElementById( 'a2' ).style.display == 'block' ) {
+      if ( !fname || !lname || !num || !pin || !city || !state || !address ) {
+        alert( "Please fill all details" )
+      } else if ( !cardname || !cardnumber || !exp || !cvv ) {
         alert( "Enter valid card details" )
-    } else {
+      } else {
         window.location.href = "http://localhost:3000/home/thanks";
+      }
+    } else {
+      if ( !cardname || !cardnumber || !exp || !cvv ) {
+        alert( "Enter valid card details" )
+      } else {
+        window.location.href = "http://localhost:3000/home/thanks";
+      }
     }
-}
 
   }
 
   function a() {
-    var aa = document.getElementById("aa");
-    var bb = document.getElementById("bb");
+    var aa = document.getElementById( "aa" );
+    var bb = document.getElementById( "bb" );
 
-    var a1 = document.getElementById("a1");
-    var a2 = document.getElementById("a2");
-    var a3 = document.getElementById("a3");
+    var a1 = document.getElementById( "a1" );
+    var a2 = document.getElementById( "a2" );
+    var a3 = document.getElementById( "a3" );
 
     // a1.style.visibility = "visible";
 
@@ -232,12 +232,12 @@ if ( document.getElementById( 'a2' ).style.display == 'block' ) {
     a2.style.display = "block";
     a1.style.display = "none";
 
-   
+
   }
   function b() {
-    var a1 = document.getElementById("a1");
-    var a2 = document.getElementById("a2");
-    var a3 = document.getElementById("a3");
+    var a1 = document.getElementById( "a1" );
+    var a2 = document.getElementById( "a2" );
+    var a3 = document.getElementById( "a3" );
 
     a1.style.display = "block";
     a2.style.display = "none";
@@ -248,5 +248,5 @@ if ( document.getElementById( 'a2' ).style.display == 'block' ) {
   }
 
 
-  
+
 </script>
