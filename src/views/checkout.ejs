@@ -14,10 +14,10 @@
   <header class="home-header">
     <div class="left-header">
       <div class="stores-contact">
-        <a href="http://localhost:3000/home/productList"><img src="/static/img/H1.png" /></a>
+        <a href="/home/productList"><img src="/static/img/H1.png" /></a>
       </div>
       <div class="head-logo">
-        <a href="http://localhost:3000/home"><img
+        <a href="/home"><img
             src="	https://prodstatic.shoppersstop.com/_ui/responsive/common/assets/images/sslogo.svg" /></a>
       </div>
     </div>
@@ -160,7 +160,7 @@
   user.innerHTML = loggedIn;
 
   function openWin() {
-    // window.location.href="http://localhost:3000/home/thanks";
+    // window.location.href="/home/thanks";
     let fname = document.getElementById( "fname" ).value.trim();
     let lname = document.getElementById( "lname" ).value.trim();
     let num = document.getElementById( "num" ).value.trim();
@@ -179,13 +179,13 @@
       } else if ( !cardname || !cardnumber || !exp || !cvv ) {
         alert( "Enter valid card details" )
       } else {
-        window.location.href = "http://localhost:3000/home/thanks";
+        window.location.href = "/home/thanks";
       }
     } else {
       if ( !cardname || !cardnumber || !exp || !cvv ) {
         alert( "Enter valid card details" )
       } else {
-        window.location.href = "http://localhost:3000/home/thanks";
+        window.location.href = "/home/thanks";
       }
     }
 
