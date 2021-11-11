@@ -1,64 +1,64 @@
-// fetch(`http://localhost:3000/cart`)
+// fetch(`/cart`)
 //   .then((response) => response.json())
 //   .then((data) => {
 //     showcart(data.cart);
 //   });
 
 async function showcart() {
-  // let response = await fetch(`http://localhost:3000/cart`);
+  // let response = await fetch(`/cart`);
   // let cartObj = await response.json();
   // localStorage.setItem("cart", JSON.stringify(cartObj.cart));
   // let cart = cartObj.cart;
-  let cart = JSON.parse(localStorage.getItem("cart"));
-  const summary = document.querySelector(".summary-subtotal");
-  if (cart == null) {
+  let cart = JSON.parse( localStorage.getItem( "cart" ) );
+  const summary = document.querySelector( ".summary-subtotal" );
+  if ( cart == null ) {
     summary.style.display = "none";
-    alert("Cart is empty!");
+    alert( "Cart is empty!" );
   } else {
     summary.style.display = "block";
-    let bag = document.getElementById("bag");
-    cart.forEach(function (el, i) {
-      let product = document.createElement("div");
-      product.setAttribute("class", "basket-product");
+    let bag = document.getElementById( "bag" );
+    cart.forEach( function ( el, i ) {
+      let product = document.createElement( "div" );
+      product.setAttribute( "class", "basket-product" );
       product.innerHTML = `<div class="item">
             <div class="product-image">
-              <img src="${el.img_1}">
+              <img src="${ el.img_1 }">
             </div>
             <div class="product-details">
-              <h1><strong><span class="item-quantity">1</span> ${el.name}</strong> ${el.detail}</h1>
+              <h1><strong><span class="item-quantity">1</span> ${ el.name }</strong> ${ el.detail }</h1>
             
             </div>
           </div>
-          <div class="price">${el.price}</div>
+          <div class="price">${ el.price }</div>
           <div class="quantity">
-            <input type="number" value="${el.quantity}" min="1" id="${el._id}" class="quantity-field">
+            <input type="number" value="${ el.quantity }" min="1" id="${ el._id }" class="quantity-field">
           </div>
-          <div class="subtotal">${el.price}</div>
+          <div class="subtotal">${ el.price }</div>
           <div class="remove">
-            <button id="${el._id}" value="${i}">Remove</button>
+            <button id="${ el._id }" value="${ i }">Remove</button>
           </div>`;
-      bag.append(product);
-    });
+      bag.append( product );
+    } );
   }
 }
 showcart();
 
 function openWin() {
-  let isLoggedIn = JSON.parse(localStorage.getItem("loggedIn"));
-  if (isLoggedIn == null) {
+  let isLoggedIn = JSON.parse( localStorage.getItem( "loggedIn" ) );
+  if ( isLoggedIn == null ) {
     isLoggedIn = "";
   }
-  if (isLoggedIn == "") {
-    alert("Please Sign In to checkout !");
-    window.location.href = "http://localhost:3000/home";
+  if ( isLoggedIn == "" ) {
+    alert( "Please Sign In to checkout !" );
+    window.location.href = "/home";
   } else {
-    let total = document.getElementById("basket-total").innerText;
-    localStorage.setItem("basket-total", JSON.stringify(total));
+    let total = document.getElementById( "basket-total" ).innerText;
+    localStorage.setItem( "basket-total", JSON.stringify( total ) );
 
-    let subtotal = document.getElementById("basket-subtotal").innerText;
-    localStorage.setItem("basket-subtotal", JSON.stringify(subtotal));
+    let subtotal = document.getElementById( "basket-subtotal" ).innerText;
+    localStorage.setItem( "basket-subtotal", JSON.stringify( subtotal ) );
 
-    window.location.href = "http://localhost:3000/home/checkout";
+    window.location.href = "/home/checkout";
   }
 }
 
@@ -69,160 +69,160 @@ var shippingRate = 100;
 var fadeTime = 300;
 
 /* Assign actions */
-$(".quantity input").change(function () {
-  updateQuantity(this);
-});
+$( ".quantity input" ).change( function () {
+  updateQuantity( this );
+} );
 
-$(".remove button").click(function () {
-  removeItem(this);
-});
+$( ".remove button" ).click( function () {
+  removeItem( this );
+} );
 
-$(document).ready(function () {
+$( document ).ready( function () {
   updateSumItems();
-});
+} );
 
-$(".promo-code-cta").click(function () {
-  promoCode = $("#promo-code").val();
+$( ".promo-code-cta" ).click( function () {
+  promoCode = $( "#promo-code" ).val();
 
-  if (promoCode == "MASAI" || promoCode == "masai") {
+  if ( promoCode == "MASAI" || promoCode == "masai" ) {
     //If promoPrice has no value, set it as 10 for the 10OFF promocode
-    if (!promoPrice) {
+    if ( !promoPrice ) {
       promoPrice = 500;
-    } else if (promoCode) {
+    } else if ( promoCode ) {
       promoPrice = promoPrice * 1;
     }
-  } else if (promoCode != "") {
-    alert("Invalid Promo Code");
+  } else if ( promoCode != "" ) {
+    alert( "Invalid Promo Code" );
     promoPrice = 0;
   }
   //If there is a promoPrice that has been set (it means there is a valid promoCode input) show promo
-  if (promoPrice) {
-    $(".summary-promo").removeClass("hide");
-    $(".promo-value").text(promoPrice.toFixed(2));
-    recalculateCart(true);
+  if ( promoPrice ) {
+    $( ".summary-promo" ).removeClass( "hide" );
+    $( ".promo-value" ).text( promoPrice.toFixed( 2 ) );
+    recalculateCart( true );
   }
-});
+} );
 
 /* Recalculate cart */
-function recalculateCart(onlyTotal) {
+function recalculateCart( onlyTotal ) {
   var subtotal = 0;
 
   /* Sum up row totals */
-  $(".basket-product").each(function () {
-    subtotal += parseFloat($(this).children(".subtotal").text());
-  });
+  $( ".basket-product" ).each( function () {
+    subtotal += parseFloat( $( this ).children( ".subtotal" ).text() );
+  } );
 
   /* Calculate totals */
   var total = subtotal;
   var shipping = subtotal > 0 ? shippingRate : 0;
   var total = shipping + subtotal;
   //If there is a valid promoCode, and subtotal < 10 subtract from total
-  var promoPrice = parseFloat($(".promo-value").text());
-  if (promoPrice) {
-    if (subtotal >= 10) {
+  var promoPrice = parseFloat( $( ".promo-value" ).text() );
+  if ( promoPrice ) {
+    if ( subtotal >= 10 ) {
       total -= promoPrice;
     } else {
-      alert("Order must be more than £10 for Promo code to apply.");
-      $(".summary-promo").addClass("hide");
+      alert( "Order must be more than £10 for Promo code to apply." );
+      $( ".summary-promo" ).addClass( "hide" );
     }
   }
 
   /*If switch for update only total, update only total display*/
-  if (onlyTotal) {
+  if ( onlyTotal ) {
     /* Update total display */
-    $(".total-value").fadeOut(fadeTime, function () {
-      $("#basket-total").html(total.toFixed(2));
-      $(".total-value").fadeIn(fadeTime);
-    });
+    $( ".total-value" ).fadeOut( fadeTime, function () {
+      $( "#basket-total" ).html( total.toFixed( 2 ) );
+      $( ".total-value" ).fadeIn( fadeTime );
+    } );
   } else {
     /* Update summary display. */
-    $(".final-value").fadeOut(fadeTime, function () {
-      $("#basket-subtotal").html(subtotal.toFixed(2));
-      $("#basket-shipping").html(shipping.toFixed(2));
-      $("#basket-total").html(total.toFixed(2));
+    $( ".final-value" ).fadeOut( fadeTime, function () {
+      $( "#basket-subtotal" ).html( subtotal.toFixed( 2 ) );
+      $( "#basket-shipping" ).html( shipping.toFixed( 2 ) );
+      $( "#basket-total" ).html( total.toFixed( 2 ) );
 
-      if (total == 0) {
-        $(".checkout-cta").fadeOut(fadeTime);
+      if ( total == 0 ) {
+        $( ".checkout-cta" ).fadeOut( fadeTime );
       } else {
-        $(".checkout-cta").fadeIn(fadeTime);
+        $( ".checkout-cta" ).fadeIn( fadeTime );
       }
-      $(".final-value").fadeIn(fadeTime);
-    });
+      $( ".final-value" ).fadeIn( fadeTime );
+    } );
   }
 }
 
 /* Update quantity */
-function updateQuantity(quantityInput) {
+function updateQuantity( quantityInput ) {
   /* Calculate line price */
-  var index = $(quantityInput)
+  var index = $( quantityInput )
     .parent()
-    .siblings(".remove")
+    .siblings( ".remove" )
     .children()
-    .attr("value");
-  var productRow = $(quantityInput).parent().parent();
-  var price = parseFloat(productRow.children(".price").text());
-  var quantity = $(quantityInput).val();
+    .attr( "value" );
+  var productRow = $( quantityInput ).parent().parent();
+  var price = parseFloat( productRow.children( ".price" ).text() );
+  var quantity = $( quantityInput ).val();
   var linePrice = price * quantity;
 
   /* Update line price display and recalc cart totals */
-  productRow.children(".subtotal").each(function () {
-    $(this).fadeOut(fadeTime, function () {
-      $(this).text(linePrice.toFixed(2));
+  productRow.children( ".subtotal" ).each( function () {
+    $( this ).fadeOut( fadeTime, function () {
+      $( this ).text( linePrice.toFixed( 2 ) );
       recalculateCart();
-      $(this).fadeIn(fadeTime);
-    });
-  });
+      $( this ).fadeIn( fadeTime );
+    } );
+  } );
 
   // productRow.find(".item-quantity").text(quantity);
   // updateSumItems();
 
   //update quantity in mongoDB;
   let id = quantityInput.id;
-  let body = JSON.stringify({
+  let body = JSON.stringify( {
     quantity: quantity,
-  });
-  fetch(`http://localhost:3000/cart/${id}`, {
+  } );
+  fetch( `/cart/${ id }`, {
     method: "PATCH",
     body: body,
     headers: {
       "Content-Type": "application/json",
     },
-  }).then((res) => res.json());
+  } ).then( ( res ) => res.json() );
 
   //update quantity in local;
-  let cart = JSON.parse(localStorage.getItem("cart"));
-  cart[index].quantity = quantity;
-  localStorage.setItem("cart", JSON.stringify(cart));
+  let cart = JSON.parse( localStorage.getItem( "cart" ) );
+  cart[ index ].quantity = quantity;
+  localStorage.setItem( "cart", JSON.stringify( cart ) );
 }
 
 function updateSumItems() {
   var sumItems = 0;
-  $(".quantity input").each(function () {
-    sumItems += parseInt($(this).val());
-  });
-  $(".total-items").text(sumItems);
+  $( ".quantity input" ).each( function () {
+    sumItems += parseInt( $( this ).val() );
+  } );
+  $( ".total-items" ).text( sumItems );
 }
 
 /* Remove item from cart */
-function removeItem(removeButton) {
-  let cart = JSON.parse(localStorage.getItem("cart"));
+function removeItem( removeButton ) {
+  let cart = JSON.parse( localStorage.getItem( "cart" ) );
 
   //Delete from database;
   let id = removeButton.id;
-  fetch(`http://localhost:3000/cart/${id}`, {
+  fetch( `/cart/${ id }`, {
     method: "DELETE",
-  }).then((res) => res.json());
+  } ).then( ( res ) => res.json() );
 
   //Delete from local;
-  cart.splice(removeButton.value, 1);
-  localStorage.setItem("cart", JSON.stringify(cart));
+  cart.splice( removeButton.value, 1 );
+  localStorage.setItem( "cart", JSON.stringify( cart ) );
 
   /* Remove row from DOM and recalc cart total */
-  var productRow = $(removeButton).parent().parent();
-  productRow.slideUp(fadeTime, function () {
+  var productRow = $( removeButton ).parent().parent();
+  productRow.slideUp( fadeTime, function () {
     productRow.remove();
     recalculateCart();
     updateSumItems();
-  });
+  } );
 }
 recalculateCart();
