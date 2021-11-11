@@ -4,6 +4,8 @@ const express = require( "express" );
 const app = express();
 app.use( express.json() );
 
+const PORT = process.env.PORT || 5000;
+
 app.set( "views", path.join( __dirname, "views" ) );
 app.set( "view engine", "ejs" );
 app.use( "/static", express.static( path.join( __dirname, "public" ) ) );
@@ -24,7 +26,7 @@ const userController = require( "./controllers/user.controller" );
 app.use( "/users", userController );
 
 //Start connection;
-app.listen( 3000, async () => {
+app.listen( PORT, async () => {
   await connect();
   console.log( "Listening on port 3000" );
 } );
