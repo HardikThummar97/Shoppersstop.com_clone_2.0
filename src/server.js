@@ -12,7 +12,7 @@ const connect = require( "./configs/db" );
 
 //Import routers;
 const homeController = require( "./controllers/home.controller" );
-app.use( "/home", homeController );
+app.use( "/", homeController );
 
 const productController = require( "./controllers/product.controller" );
 app.use( "/products", productController );
